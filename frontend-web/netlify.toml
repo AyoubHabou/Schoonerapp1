@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+
+# Handle client-side routing with React Router  
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Environment variables (you can also set these in the Netlify dashboard)
+[context.production.environment]
+  REACT_APP_API_URL = "https://schooner-backend.onrender.com/api/v1"
